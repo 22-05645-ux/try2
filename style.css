@@ -4,6 +4,12 @@ body {
   font-family: 'Segoe UI', Roboto, sans-serif;
   background: #f9fafb;
   color: #111827;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 12px;
 }
 
 /* ------------------- HEADER ------------------- */
@@ -15,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 28px;
+  padding: 18px 30px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   z-index: 100;
 }
@@ -23,41 +29,45 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .logo {
-  height: 52px;
-  width: 52px;
+  height: 60px;
+  width: 60px;
   border-radius: 12px;
   background: white;
-  padding: 4px;
+  padding: 6px;
+}
+
+.header h1 {
+  font-size: 26px;
 }
 
 .clock {
   font-family: monospace;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 /* ------------------- CONTAINER ------------------- */
 .container {
-  padding: 110px 20px 60px;
-  max-width: 1200px;
+  padding: 120px 30px 70px;
+  max-width: 1400px;
   margin: auto;
 }
 
 /* ------------------- GRID CARDS ------------------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 .card {
   background: white;
   border-radius: 16px;
-  padding: 18px;
+  padding: 20px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
   cursor: pointer;
   text-align: center;
@@ -65,66 +75,59 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .card h2 {
-  margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   color: #064e3b;
+  margin-bottom: 6px;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 15px;
   color: #374151;
 }
 
 /* ------------------- DETAILS PAGE ------------------- */
-button {
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.02);
-}
-
 .back-btn {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   background: #e5e7eb;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
   font-weight: 500;
+  font-size: 16px;
 }
 
 .tab-buttons {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 10px;
   background: #f3f4f6;
-  padding: 6px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 10px;
   position: sticky;
-  top: 80px;
+  top: 90px;
   z-index: 50;
 }
 
 .tab-buttons button {
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
   border: none;
   background: white;
   font-weight: 500;
+  font-size: 16px;
   color: #374151;
 }
 
@@ -135,33 +138,64 @@ button:hover {
 }
 
 #tabContent {
-  margin-top: 16px;
+  margin-top: 20px;
   background: white;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  font-size: 17px;
+}
+
+/* ------------------- FORMS ------------------- */
+form {
+  display: grid;
+  gap: 16px;
+  max-width: 700px;
+}
+
+form input, form select {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 100%;
+}
+
+form button {
+  background: #065f46;
+  color: white;
+  font-size: 17px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+form button:hover {
+  background: #047857;
 }
 
 /* ------------------- TABLE ------------------- */
 table {
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 14px;
   width: 100%;
-  border-radius: 8px;
+  font-size: 16px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 th, td {
   border: 1px solid #e5e7eb;
-  padding: 8px 10px;
+  padding: 12px 14px;
   text-align: center;
-  font-size: 14px;
 }
 
 th {
   background: #f3f4f6;
   cursor: pointer;
   user-select: none;
+  font-size: 16px;
 }
 
 tr:nth-child(even) {
@@ -172,20 +206,28 @@ tr:hover {
   background: #eef2ff;
 }
 
-/* ------------------- HISTORY SECTION BUTTONS ------------------- */
-.history-section button {
-  font-size: 15px;
+/* Sticky table header */
+thead th {
+  position: sticky;
+  top: 140px;
+  background: #f3f4f6;
+  z-index: 5;
 }
 
-/* CSV Download button */
+/* ------------------- HISTORY SECTION BUTTONS ------------------- */
+.history-section button {
+  font-size: 16px;
+  padding: 10px;
+}
+
 .csv-btn {
-  margin-left: 8px;
+  margin-left: 10px;
   background: #10b981;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 .csv-btn:hover {
@@ -197,7 +239,8 @@ tr:hover {
   background: #064e3b;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 14px;
+  font-size: 15px;
   position: fixed;
   bottom: 0; left: 0; right: 0;
 }
