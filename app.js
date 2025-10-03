@@ -279,11 +279,65 @@ function exportHistory(type){
 }
 
 // ------------------- FORMS -------------------
-function submitMaintenance(e){e.preventDefault();addHistory("Maintenance",Object.fromEntries(new FormData(e.target))); }
-function submitVehicleRequest(e){e.preventDefault();addHistory("Vehicle",Object.fromEntries(new FormData(e.target))); }
-function submitWhereabouts(e){e.preventDefault();const fd=new FormData(e.target);let place=fd.get("place");if(place==="Company Use")place+=" - "+fd.get("company");const v=vehicles.find(x=>x.plate===selectedVehicle);v.whereabouts=place;addHistory("Whereabouts",{place,date:new Date().toISOString().split("T")[0]}); }
-function submitFuel(e){e.preventDefault();addHistory("Fuel",Object.fromEntries(new FormData(e.target))); }
-function submitReport(e){e.preventDefault();addHistory("Report",{file:e.target.report.value,date:new Date().toISOString().split("T")[0]}); }
+// ------------------- FORMS -------------------
+function submitMaintenance(e){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  addHistory("Maintenance", {
+    date: fd.get("date"),
+    cv: fd.get("cv"),
+    reason: fd.get("reason"),
+    cost: fd.get("cost")
+  });
+}
+
+function submitVehicleRequest(e){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  addHistory("Vehicle", {
+    date: fd.get("date"),
+    project: fd.get("project"),
+    from: fd.get("from"),
+    to: fd.get("to"),
+    driver: fd.get("driver"),
+    purpose: fd.get("purpose"),
+    request: fd.get("request")
+  });
+}
+
+function submitWhereabouts(e){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  let place = fd.get("place");
+  if(place==="Company Use") place += " - " + fd.get("company");
+  const v = vehicles.find(x=>x.plate===selectedVehicle);
+  v.whereabouts = place;
+  addHistory("Whereabouts", {
+    date: new Date().toISOString().split("T")[0],
+    place: place
+  });
+}
+
+function submitFuel(e){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  addHistory("Fuel", {
+    date: fd.get("date"),
+    bearer: fd.get("bearer"),
+    order: fd.get("order"),
+    gas: fd.get("gas"),
+    amount: fd.get("amount")
+  });
+}
+
+function submitReport(e){
+  e.preventDefault();
+  addHistory("Report", {
+    date: new Date().toISOString().split("T")[0],
+    file: e.target.report.value
+  });
+}
+
 
 // ------------------- INIT -------------------
 renderList();
