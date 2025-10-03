@@ -6,6 +6,12 @@ let vehicles = JSON.parse(localStorage.getItem("vehicles")) || [
   { plate: "CBP 5511", whereabouts: "Batangas City", history: [] },
   { plate: "CBP 1336", whereabouts: "Batangas City", history: [] },
   { plate: "ZSG 105", whereabouts: "Batangas City", history: [] },
+  { plate: "UOF 225", whereabouts: "Batangas City", history: [],},
+  { plate: "NQX 657", whereabouts: "Batangas City", history: [],},
+  { plate: "WQT 225", whereabouts: "Batangas City", history: [],},
+  { plate: "MAM 7806", whereabouts: "Batangas City", history: [],},
+  { plate: "NBO 6586", whereabouts: "Batangas City", history: [],},
+  { plate: "EMPTY", whereabouts: "Batangas City", history: [],},
 ];
 
 const details = {
@@ -14,6 +20,13 @@ const details = {
   "NFZ 2848": { model: "Isuzu Traviz", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
   "CBP 5511": { model: "Isuzu Elf Truck", yearBought: "2021", status: "Active", lastTrip: "2025-09-05", lastMaintenance: "2025-09-15", whereabouts: "Batangas City" },
   "CBP 1336": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "ZSG 105":  { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "UOF 225": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "NQX 657": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "WQT 225": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "MAM 7806": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "NBO 6586": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
+  "EMPTY": { model: "Isuzu Elf Truck", yearBought: "2023", status: "Under Maintenance", lastTrip: "2025-09-08", lastMaintenance: "2025-09-16", whereabouts: "Batangas City" },
 };
 
 const app = document.getElementById("app");
